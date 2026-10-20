@@ -1,0 +1,169 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #111827;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  overflow: hidden;
+  user-select: none;
+}
+
+.game-container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hud-overlay {
+  position: absolute;
+  top: 15px;
+  left: 20px;
+  right: 20px;
+  display: flex;
+  justify-content: space-between;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.stage-badge {
+  background: #1e293b;
+  border: 2px solid #f59e0b;
+  color: #f59e0b;
+  padding: 6px 16px;
+  border-radius: 8px;
+  font-weight: 900;
+  font-size: 14px;
+  letter-spacing: 1px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+}
+
+.hud-right {
+  display: flex;
+  gap: 10px;
+}
+
+.hud-stat-box {
+  background: rgba(15, 23, 42, 0.9);
+  border: 1px solid #334155;
+  color: #fff;
+  padding: 6px 14px;
+  border-radius: 6px;
+  font-weight: bold;
+  font-size: 13px;
+  letter-spacing: 0.5px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.stat-value {
+  color: #38bdf8;
+}
+
+.bottom-controls-bar {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(15, 23, 42, 0.85);
+  border: 1px solid #334155;
+  padding: 8px 16px;
+  border-radius: 20px;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  z-index: 10;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+}
+
+.control-pill {
+  background: #1e293b;
+  color: #cbd5e1;
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  border: 1px solid #475569;
+}
+
+.control-pill.highlight {
+  background: #0f172a;
+  color: #f59e0b;
+  border-color: #f59e0b;
+}
+
+.failure-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(11, 15, 25, 0.82);
+  backdrop-filter: blur(3px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+
+.failure-banner {
+  background: #111827;
+  border: 2px solid #ef4444;
+  padding: 30px 45px;
+  border-radius: 12px;
+  text-align: center;
+  color: white;
+  box-shadow: 0 20px 40px rgba(239, 68, 68, 0.25);
+  width: 380px;
+}
+
+.badge-accident {
+  background: rgba(239, 68, 68, 0.15);
+  color: #f87171;
+  border: 1px solid #ef4444;
+  padding: 3px 10px;
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  display: inline-block;
+  margin-bottom: 15px;
+}
+
+.failure-banner h2 {
+  margin: 0 0 12px 0;
+  color: #f87171;
+  font-size: 22px;
+  letter-spacing: 0.5px;
+}
+
+.failure-banner p {
+  color: #94a3b8;
+  font-size: 13px;
+  margin-bottom: 25px;
+  line-height: 1.5;
+}
+
+.restart-btn {
+  background: #0284c7;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  font-size: 13px;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s;
+  width: 100%;
+  box-shadow: 0 4px 10px rgba(2, 132, 199, 0.4);
+}
+
+.restart-btn:hover {
+  background: #0369a1;
+}
+
+canvas {
+  display: block;
+}
